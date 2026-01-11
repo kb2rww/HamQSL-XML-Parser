@@ -1,4 +1,7 @@
-// https://github.com/canislupus11/HamQSL-XML-Parser/blob/main/README.md
+/* https://github.com/canislupus11/HamQSL-XML-Parser/blob/main/README.md
+  I'M using ST7796U 3.5" ISP LCD Module from https://hosyond.com/
+  */
+
 
 
 #include <WiFi.h>
