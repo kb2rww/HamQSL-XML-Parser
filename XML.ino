@@ -5,7 +5,6 @@
 #include <WiFiManager.h>
 #include <WiFiClientSecure.h>
 #include <ArduinoHttpClient.h>
-//#include "TFT_ColorPatch.h"
 #include <TFT_eSPI.h>   
 #include <SPI.h>
 
