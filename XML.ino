@@ -1,21 +1,25 @@
+// https://github.com/canislupus11/HamQSL-XML-Parser/blob/main/README.md
+
+
 #include <WiFi.h>
 #include <WiFiManager.h>
 #include <WiFiClientSecure.h>
 #include <ArduinoHttpClient.h>
+//#include "TFT_ColorPatch.h"
 #include <TFT_eSPI.h>   
 #include <SPI.h>
 
 // Color Define
-#define RED     0xf904
-//#define RED 0x001F  // Configuration for TZT ESP32 LVGL screen
-#define YELLOW  0xffe0
-//#define YELLOW 0x07FF  // Configuration for TZT ESP32 LVGL screen
-#define GREEN   0x07e0
-#define WHITE   0xFFFF
-#define BACKGROUND 0x0000
-
+#define RED     0xF800
+#define YELLOW  0xFFE0
+#define GREEN  0x07E0
+#define WHITE   0xFFFF // white = 0xFFFF
+#define BACKGROUND  0x0000 // black = 0x0000
+#define BLUE  0x001F
 
 TFT_eSPI tft = TFT_eSPI();
+//#include "TFT_ColorPatch.h"
+//TFT_eSPI_Patched tft;
 
 // LED
 #define LED 22
@@ -113,6 +117,7 @@ void setup() {
   tft.setFreeFont(&FreeSansBold12pt7b);
 
   secureClient.setInsecure();
+ 
 }
 
 
@@ -129,7 +134,7 @@ void loop() {
 void connectToWiFi() {
   WiFi.mode(WIFI_STA);
   WiFiManager wm;
-  //wm.resetSettings();  //uncomment for WiFi Manager reset
+  // wm.resetSettings();  //uncomment for WiFi Manager reset
   wm.setWiFiAPChannel(6);
   wm.setConfigPortalTimeout(300); // timeout in seconds (5 minut)
 
