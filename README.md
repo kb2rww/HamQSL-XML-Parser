@@ -1,6 +1,6 @@
 I modified the code to use a 3.5" display using a st7796 driver. unfortinitly it would not work right untill i figuerd it out. the driver was modified to work with my display.
 ST7796_driver, _defines, _Init and rotation can be found in the drivers file.
-
+add ESP32-2432S028R display and adjusted origenal code to work on it.
 
 License: CC-BY-NC-SA
 
