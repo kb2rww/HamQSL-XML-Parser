@@ -12,6 +12,8 @@
 
 // ------------------------------------------------------------
 //  ADD THE SCALING LAYER RIGHT HERE
+//  I found that if i just use the screen size devided by it-self
+//  worked perficetly for me. I dont understand there scaling methed.
 // ------------------------------------------------------------
 //float Sx = 320.0 / 240.0;  // 1.3333
 float Sx = 320.0 / 320.0;  // 
